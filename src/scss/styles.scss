@@ -1,0 +1,785 @@
+@import url("https://fonts.googleapis.com/css2?family=B612+Mono&family=DM+Serif+Display:ital@0;1&display=swap");
+@import "_variables";
+@import "_mixin";
+
+@include mobile {
+}
+
+@include tablet {
+}
+
+@include desktop {
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  .strong {
+    font-weight: 700;
+  }
+  header {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    padding-top: 50px;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+    .header {
+      span {
+        color: black;
+      }
+      @include mobile {
+        display: grid;
+        grid-template-columns: 1fr 8fr 0.8fr 0.8fr;
+        justify-content: center;
+        div {
+          display: flex;
+          justify-content: center;
+          font-size: 24px;
+          text-transform: uppercase;
+          padding-left: 30px;
+        }
+      }
+
+      @include tablet {
+        display: grid;
+        grid-template-columns: 15fr 1.2fr 1fr;
+        justify-content: center;
+        padding-bottom: 25px;
+        .drop_menu {
+          display: none;
+        }
+        div {
+          display: flex;
+          justify-content: center;
+          font-size: 24px;
+          text-transform: uppercase;
+          padding-left: 30px;
+        }
+      }
+
+      @include desktop {
+        display: grid;
+        grid-template-columns: 15fr 1.2fr 1fr;
+        justify-content: center;
+        padding-bottom: 25px;
+        .drop_menu {
+          display: none;
+        }
+        div {
+          display: flex;
+          justify-content: center;
+          font-size: 24px;
+          text-transform: uppercase;
+          padding-left: 30px;
+        }
+      }
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      @include mobile {
+        .select {
+          display: none;
+        }
+      }
+      @include tablet {
+        .select {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+
+      @include desktop {
+        .select {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .promotion {
+    @include mobile {
+      height: 350px;
+      background-color: rgb(231, 230, 225);
+      .under_promotion {
+        height: 100%;
+
+        margin: 0 auto;
+        background-image: url(https://darlcha-store.s3.amazonaws.com/static/media/home_bg_pc.6c8e2166.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: start;
+        align-items: center;
+        div {
+          padding: 12px 50px;
+          h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+          }
+          p {
+            margin-bottom: 60px;
+            font-size: 12px;
+            line-height: 18px;
+          }
+          span {
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            font-weight: 900;
+            padding: 15px 10px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+    @include tablet {
+      height: 350px;
+      background-color: rgb(231, 230, 225);
+      .under_promotion {
+        height: 100%;
+
+        margin: 0 auto;
+        background-image: url(https://darlcha-store.s3.amazonaws.com/static/media/home_bg_pc.6c8e2166.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: start;
+        align-items: center;
+        div {
+          padding: 12px 50px;
+          h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+          }
+          p {
+            margin-bottom: 60px;
+            font-size: 12px;
+            line-height: 18px;
+          }
+          span {
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            font-weight: 900;
+            padding: 15px 10px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+    @include desktop {
+      height: 450px;
+      background-color: rgb(231, 230, 225);
+      .under_promotion {
+        height: 100%;
+        width: 1280px;
+        margin: 0 auto;
+        background-image: url(https://darlcha-store.s3.amazonaws.com/static/media/home_bg_pc.6c8e2166.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: start;
+        align-items: center;
+        div {
+          padding: 12px 150px;
+          h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+          }
+          p {
+            margin-bottom: 60px;
+            font-size: 16px;
+            line-height: 30px;
+          }
+          span {
+            background-color: black;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+  .wrap {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    section {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr repeat(3, 2.1fr);
+      justify-content: center;
+      align-items: center;
+      .intro {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 80px;
+        span {
+          font-size: 13px;
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+          padding-top: 10px;
+        }
+        p {
+          font-size: 11px;
+          height: 10%;
+          line-height: 150%;
+          opacity: 0.7;
+          font-weight: 550;
+        }
+      }
+      article {
+        @include mobile {
+          img {
+            width: 430px;
+            height: 430px;
+          }
+          .wrapper {
+            width: 430px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            justify-content: center;
+            align-items: center;
+            padding: 0 165px;
+            .content {
+              padding-top: 30px;
+              h4 {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 20px;
+              }
+              p {
+                font-size: 10px;
+                height: 10%;
+                line-height: 150%;
+                opacity: 0.7;
+                font-weight: 550;
+                line-height: 20px;
+                margin-bottom: 40px;
+              }
+              .under_content {
+                display: grid;
+                grid-template-rows: 0.5fr 1.5fr 1fr;
+              }
+              .ea {
+                font-size: 11px;
+                height: 10%;
+                line-height: 100%;
+                opacity: 0.7;
+                font-weight: 550;
+                padding-bottom: 5px;
+              }
+              .sm_content {
+                display: flex;
+                justify-content: space-between;
+              }
+              .price {
+                font-size: 28px;
+                font-weight: 600;
+                span {
+                  font-size: 16px;
+                  font-weight: 100;
+                }
+              }
+              .sale {
+                padding-top: 10px;
+                display: flex;
+                align-items: center;
+                li {
+                  &:nth-child(1) {
+                    background-color: #e6818b;
+                    color: white;
+                    padding: 1px 5px;
+                    font-size: 10px;
+                    margin-right: 10px;
+                  }
+                  &:nth-child(2) {
+                    background-color: black;
+                    color: white;
+                    padding: 1px 5px;
+                    font-size: 11px;
+                    margin-right: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        @include tablet {
+          img {
+            width: 430px;
+            height: 430px;
+          }
+          .wrapper {
+            width: 430px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            justify-content: center;
+            align-items: center;
+            padding: 0 165px;
+            .content {
+              padding-top: 30px;
+              h4 {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 20px;
+              }
+              p {
+                font-size: 10px;
+                height: 10%;
+                line-height: 150%;
+                opacity: 0.7;
+                font-weight: 550;
+                line-height: 20px;
+                margin-bottom: 40px;
+              }
+              .under_content {
+                display: grid;
+                grid-template-rows: 0.5fr 1.5fr 1fr;
+              }
+              .ea {
+                font-size: 11px;
+                height: 10%;
+                line-height: 100%;
+                opacity: 0.7;
+                font-weight: 550;
+                padding-bottom: 5px;
+              }
+              .sm_content {
+                display: flex;
+                justify-content: space-between;
+              }
+              .price {
+                font-size: 28px;
+                font-weight: 600;
+                span {
+                  font-size: 16px;
+                  font-weight: 100;
+                }
+              }
+              .sale {
+                padding-top: 10px;
+                display: flex;
+                align-items: center;
+                li {
+                  &:nth-child(1) {
+                    background-color: #e6818b;
+                    color: white;
+                    padding: 1px 5px;
+                    font-size: 10px;
+                    margin-right: 10px;
+                  }
+                  &:nth-child(2) {
+                    background-color: black;
+                    color: white;
+                    padding: 1px 5px;
+                    font-size: 11px;
+                    margin-right: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        @include desktop {
+          img {
+            width: 330px;
+            height: 330px;
+          }
+          .wrapper {
+            width: 1280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 165px;
+            .content {
+              padding: 0 60px;
+              h4 {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 20px;
+              }
+              p {
+                font-size: 13px;
+                height: 10%;
+                line-height: 150%;
+                opacity: 0.7;
+                font-weight: 550;
+                line-height: 20px;
+                margin-bottom: 40px;
+              }
+              .under_content {
+                display: grid;
+                grid-template-rows: 0.5fr 1.5fr 1fr;
+              }
+              .ea {
+                font-size: 11px;
+                height: 10%;
+                line-height: 100%;
+                opacity: 0.7;
+                font-weight: 550;
+                padding-bottom: 5px;
+              }
+              .price {
+                font-size: 28px;
+                font-weight: 600;
+                span {
+                  font-size: 16px;
+                  font-weight: 100;
+                }
+              }
+              .sale {
+                padding-top: 10px;
+                display: flex;
+                align-items: center;
+                li {
+                  &:nth-child(1) {
+                    background-color: #e6818b;
+                    color: white;
+                    padding: 1px 5px;
+                    font-size: 10px;
+                    margin-right: 10px;
+                  }
+                  &:nth-child(2) {
+                    background-color: black;
+                    color: white;
+                    padding: 1px 5px;
+                    font-size: 11px;
+                    margin-right: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .Principle {
+    @include mobile {
+      padding: 50px 0;
+      width: 100%;
+      background-color: #f7edee;
+      display: grid;
+      grid-template-rows: 1fr 1fr 3fr;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      h3 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      span {
+        font-size: 13px;
+        height: 10%;
+        line-height: 150%;
+        opacity: 0.7;
+        font-weight: 550;
+        margin-bottom: 40px;
+      }
+      .low {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        :nth-child(2),
+        :nth-child(3) {
+          display: none;
+        }
+        div {
+          background-image: url(http://www.ujbnews.net/data/photos/20171040/art_1506920006.png);
+          background-size: cover;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          margin: 0 10px;
+
+          p {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 18px;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+
+    @include tablet {
+      padding: 50px 0;
+      width: 100%;
+      background-color: #f7edee;
+      display: grid;
+      grid-template-rows: 1fr 1fr 3fr;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      h3 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      span {
+        font-size: 13px;
+        height: 10%;
+        line-height: 150%;
+        opacity: 0.7;
+        font-weight: 550;
+        margin-bottom: 40px;
+      }
+      .low {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+
+        div {
+          background-image: url(http://www.ujbnews.net/data/photos/20171040/art_1506920006.png);
+          background-size: cover;
+          width: 175px;
+          height: 175px;
+          border-radius: 50%;
+          margin: 0 10px;
+
+          p {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 18px;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+
+    @include desktop {
+      padding: 50px 0;
+      width: 100%;
+      background-color: #f7edee;
+      display: grid;
+      grid-template-rows: 1fr 1fr 3fr;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      h3 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      span {
+        font-size: 13px;
+        height: 10%;
+        line-height: 150%;
+        opacity: 0.7;
+        font-weight: 550;
+        margin-bottom: 40px;
+      }
+      .low {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+
+        div {
+          background-image: url(http://www.ujbnews.net/data/photos/20171040/art_1506920006.png);
+          background-size: cover;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          margin: 0 10px;
+          p {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 18px;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    @include mobile {
+      background-color: #878485;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: start;
+      padding: 40px 20px;
+      width: 100%;
+      .footer {
+        display: grid;
+        width: 100%;
+        justify-content: start;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+      }
+      ul {
+        padding-right: 20px;
+        padding-bottom: 20px;
+        color: white;
+        &:nth-child(2) {
+          li {
+            font-weight: bolder;
+          }
+        }
+        :nth-child(1) {
+          font-weight: 600;
+        }
+
+        li {
+          padding: 10px 0;
+          font-size: 10px;
+          &:nth-child(1) {
+            border-bottom: 1px solid white;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+          }
+          img {
+            margin-top: 20px;
+            margin-right: 20px;
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+
+    @include tablet {
+      background-color: #878485;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      padding: 40px 50px;
+      .footer {
+        display: grid;
+        justify-content: space-around;
+        width: 1200px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      ul {
+        padding-right: 20px;
+        color: white;
+        &:nth-child(2) {
+          li {
+            font-weight: bolder;
+          }
+        }
+        :nth-child(1) {
+          font-weight: 600;
+        }
+
+        li {
+          padding: 10px 0;
+          font-size: 10px;
+          &:nth-child(1) {
+            border-bottom: 1px solid white;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+          }
+          img {
+            margin-top: 20px;
+            margin-right: 20px;
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+
+    @include desktop {
+      background-color: #878485;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      padding: 40px 100px;
+      .footer {
+        display: grid;
+        justify-content: space-around;
+        width: 1200px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      ul {
+        padding-right: 20px;
+        color: white;
+        &:nth-child(2) {
+          li {
+            font-weight: bolder;
+          }
+        }
+        :nth-child(1) {
+          font-weight: 600;
+        }
+
+        li {
+          padding: 10px 0;
+          font-size: 13px;
+          &:nth-child(1) {
+            border-bottom: 1px solid white;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+          }
+          img {
+            margin-top: 20px;
+            margin-right: 20px;
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}

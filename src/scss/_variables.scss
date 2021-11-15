@@ -1,0 +1,12 @@
+$paddingLeft: 65px;
+$bg: #af7732;
+%p {
+  font-size: 13px;
+  height: 10%;
+  line-height: 150%;
+  opacity: 0.7;
+  font-weight: 550;
+}
+$breakpoint-mobile: 0px;
+$breakpoint-tablet: 692px;
+$breakpoint-desktop: 1152px;
